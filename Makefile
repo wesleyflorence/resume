@@ -12,7 +12,6 @@ TEX_FILES=$(wildcard *.tex)
 all: resume
 
 # Compile the LaTeX document with the environment variables
-# Compile the LaTeX document with the environment variables
 resume: $(TEX_FILES)
 	if [ -n "$(PHONE)" ]; \
 	then \
