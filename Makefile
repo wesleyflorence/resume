@@ -25,6 +25,11 @@ resume: $(TEX_FILES)
 markdown:
 	pandoc --filter=remove_header.py -t gfm -o $(RESUME).md $(RESUME).tex
 
+html:
+	pandoc --filter=remove_header.py -o $(RESUME).html $(RESUME).tex
+	gsed -i 's/ style="[^"]*"//g; s/ class="[^"]*"//g' $(RESUME).html
+
+
 # Watch for changes in the .tex files, rebuild as needed, and only open zathura if not already open
 watch: resume
 	@echo "Watching .tex files for changes... Press Ctrl+C to stop."
