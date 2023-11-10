@@ -1,0 +1,214 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubheadingPromo}[6]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://wesflorence.com/}{\Large Wesley Florence}} & \href{https://wesflorence.com/}{wesflorence.com} \\
+  \ifdefined\email
+    Email : \href{mailto:\email}{\email} & 
+  \fi
+  \ifdefined\mobile
+    Mobile : \mobile \\
+  \fi
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northeastern University Khoury College of Computer Science}{Seattle, WA}
+      {Master of Science in Computer Science}{Jan. 2018 -- May. 2020}
+    \resumeSubheading
+      {The Ohio State University Michael E. Moritz College of Law}{Columbus, OH}
+      {Juris Doctor Candidate}{Aug. 2016 -- May. 2017}
+    \resumeSubheading
+      {West Virginia University}{Morgantown, WV}
+      {Bachelor of Science in Economics; Minor in Philosophy}{Jan. 2013 -- May. 2016}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheadingPromo
+      {Nordstrom}{Seattle, WA}
+      {Software Development Engineer 2 - Product Platform Team}{Aug 2022 - Present}
+      {Software Development Engineer 1 - Product Platform Team}{Aug 2020 - July 2022}
+      \resumeItemListStart
+        \resumeItem{Product Ingestion}
+          {Crafting a modern API and event-driven system to programatically and systematically create and update product data from partners directly for Nordstrom.}
+        \resumeItem{Enabling Dropship}
+          {Built a new ingestion pipeline that empowers dropshipping partners with automated product setup. Ingested items post directly to Nordstrom.com without human intervention. This initiative leverages Apache Kafka to handle millions of daily updates.}
+          \resumeItem{Schema Design}
+          {Contributed to Avro schema design and drove discussion between teams to quantify how incoming and outgoing data should be mapped.}
+        \resumeItem{Java Spring Boot}
+          {Building modern Java micro-services powered by Spring Boot.}
+        \resumeItem{Powered by AWS}
+          {Leveraging cloud storage at scale with S3, DynamoDB, and RDS hosted PosgreSQL and MySQL instances, all managed with code using Terraform.}
+        \resumeItem{Continuous Delivery}
+          {Working in an Agile Software Development environment, powered by Gitlab CI/CD, Kubernetes, and Dockerized deployments.}
+        \resumeItem{Metrics}
+          {Using New Relic and Splunk to craft dashboards that communicate KPIs to stakeholders.}
+        \resumeItem{Inter-team support}
+          {Experience being on primary on call, supporting internal teams and business partners.}
+      \resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Polyverse}{Bellvue, WA}
+      {Software Development Engineer Intern}{May 2019 - Aug 2019}
+      \resumeItemListStart
+        \resumeItem{Email Security}
+          {Designed and implemented a cyber security product that would make email phishing economically prohibitive by leveraging correspondents’ shared history.}
+        \resumeItem{NPM Library in Rust}
+          {Implemented core functionality as a library for portability and eventual use with different clients. Written in Rust, compiled to WebAssembly, and distributed as a private NPM package.}
+        \resumeItem{ReactJS Outlook Add-In}
+          {Developed the initial front-end for the project. Built using web technologies: Javascript, HTML, CSS, and the Microsoft Office-js API and AWS cloud tools such as Lambda, Cloudfront, API Gateway, and Route53.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Northeastern University}{Seattle, WA}
+      {Teaching Assistant}{Aug 2018 - Apr 2019}
+      \resumeItemListStart
+        \resumeItem{CS5006 Algorithms}
+          {Taught techniques for the design and implementation of efficient algorithms.}
+        \resumeItem{CS5007 Computer Systems}
+          {Introduced the design of computer systems and programming in C. Explained basic structures of an operating system, including processes, threads, and file systems. Demonstrated how to take advantage of development tools like GDB, SSH, Valgrind, and VirtualBox}
+        \resumeItem{CS5001 Intensive Foundations of Computer Science}
+          {Fundamental computing and programming principles.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+%\section{Projects}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{Cardinal Dapp}
+%      {Proof of concept decentralized voting app}
+%  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Specializations}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Java, Python, Javascript, C, Clojure}
+      \hfill
+      \textbf{Technologies}{: AWS, Kafka, PosgreSQL}
+    }
+    \item{
+      \textbf{Interests}{: Functional Programming, Lisps, Open Source}
+      \hfill
+      \textbf{Tools}{: Emacs, Linux, Git, Fish shell}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
