@@ -23,7 +23,7 @@ resume: $(TEX_FILES)
 	fi;
 
 markdown:
-	pandoc --filter=remove_header.py -o $(RESUME).md $(RESUME).tex
+	pandoc --filter=remove_header.py -t gfm -o $(RESUME).md $(RESUME).tex
 
 # Watch for changes in the .tex files, rebuild as needed, and only open zathura if not already open
 watch: resume
