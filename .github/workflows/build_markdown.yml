@@ -24,6 +24,9 @@ jobs:
       - name: Install Python dependencies
         run: pip install panflute
 
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
+
       - name: Run Makefile command to generate Markdown
         run: make markdown
 
