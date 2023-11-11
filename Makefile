@@ -27,7 +27,7 @@ markdown:
 
 html:
 	pandoc --filter=remove_header.py -o $(RESUME).html $(RESUME).tex
-	gsed -i 's/ style="[^"]*"//g; s/ class="[^"]*"//g' $(RESUME).html
+	# gsed -i 's/ style="[^"]*"//g; s/ class="[^"]*"//g' $(RESUME).html
 
 
 # Watch for changes in the .tex files, rebuild as needed, and only open zathura if not already open
